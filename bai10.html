@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section07</title>
+</head>
+<body>
+    <script>
+        let thang = +(prompt("Nhập số tháng trong năm (1-12):"));
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                console.log(`Tháng ${thang} có 31 ngày.`);
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                console.log(`Tháng ${thang} có 30 ngày.`);
+                break;
+            case 2:
+                console.log(`Tháng 2 có 28 hoặc 29 ngày, tùy theo năm.`);
+                break;
+            default:
+                alert("Số tháng không hợp lệ. Hãy nhập số từ 1 đến 12.");
+                break;
+        }
+    </script>
+</body>
+</html>

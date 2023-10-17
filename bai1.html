@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section07</title>
+</head>
+<body>
+    <script>
+        //bài 1
+        var age = prompt("Nhập số tuổi của bạn:");
+        age = +(age);
+
+        if (age >= 18) {
+        console.log("Bạn đã đủ 18 tuổi.");
+        } else {
+        console.log("Bạn chưa đủ 18 tuổi.");
+        }
+
+        //bài 2
+        var hour = prompt("Nhập số giờ trong ngày:");
+        hour = +(hour);
+        if (hour >= 0 && hour < 18) {
+            console.log("Good day");
+        } else if (hour >= 18 && hour <= 23) {
+            console.log("Good evening");
+        } else {console.log("Giờ không hợp lệ. Vui lòng nhập một số từ 0 đến 23.");}
+
+        //bài 3
+        var hours = +(prompt("Nhập số giờ trong ngày:"));
+        for (var i = 0; i < 24; i++) {
+            if (hours < 10) {
+                console.log("Good morning");
+                break;
+            } else if (hours < 20) {
+                console.log("Good day");
+                break;
+            } else {
+                console.log("Good evening");
+                break;
+            }
+        }
+
+        //bài 4
+        var number = Number(prompt("Nhập một số:"));
+        if (number % 2 === 0) {
+            console.log(number + " là số chẵn.");
+        } else {
+            console.log(number + " là số lẻ.");
+        }
+
+        //bài 5
+        var number = +(prompt("Nhập vào một số:"));
+        if (isNaN(number)) {
+            alert("Đây không phải là một số hợp lệ.");
+        } else {
+            switch (number % 2) {
+                case 0:
+                    console.log(number, " là số chẵn.");
+                    break;
+                case 1:
+                case -1:
+                    console.log(number, " là số lẻ.");
+                    break;
+                default:
+                    console.log(number, "không phải số chẵn hay số lẻ.");
+            }
+        }
+
+        //bài 6
+        var mau = prompt("Nhập một màu:");
+        mau = mau.toLowerCase();
+        if (mau === "xanh" || mau === "đỏ" || mau === "vàng") {
+            document.write("Màu bạn vừa nhập là: " + mau);
+        } else {alert("Màu không hợp lệ!");}
+
+        //bài 7
+        var x = parseInt(prompt("Nhập một số nguyên x:"));
+        if (x === 0) {
+            console.log(`${x} có giá trị là 0.`);
+        } else if (x > 0) {
+            console.log(`${x} là số nguyên dương.`);
+        } else {
+            console.log(`${x} là số nguyên âm.`);
+        }
+
+
+    </script>
+</body>
+</html>

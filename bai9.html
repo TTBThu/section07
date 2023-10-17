@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section07</title>
+</head>
+<body>
+    <script>
+        let diemToan = +(prompt("Nhập điểm môn Toán:"));
+        let diemLy = +(prompt("Nhập điểm môn Lý:"));
+        let diemHoa = +(prompt("Nhập điểm môn Hóa:"));
+        let diemVan = +(prompt("Nhập điểm môn Văn:"));
+        let diemSu = +(prompt("Nhập điểm môn Sử:"));
+        let diemDia = +(prompt("Nhập điểm môn Địa:"));
+
+        let diemTrungBinh = (diemToan + diemLy + diemHoa + diemVan + diemSu + diemDia) / 6;
+        let xepLoai = "";
+
+        switch (true) {
+            case (diemTrungBinh >= 8.0 && diemTrungBinh <= 10):
+                xepLoai = "GIỎI";
+                break;
+            case (diemTrungBinh >= 6.5 && diemTrungBinh <= 7.9):
+                xepLoai = "KHÁ";
+                break;
+            case (diemTrungBinh >= 5.0 && diemTrungBinh <= 6.4):
+                xepLoai = "TRUNG BÌNH";
+                break;
+            case (diemTrungBinh <5.0):
+                xepLoai = "YẾU";
+            default:
+            console.log("Vui lòng nhập lại điểm");
+                break;
+        }
+
+        console.log(`Điểm trung bình: ${diemTrungBinh}`);
+        console.log(`Xếp loại: ${xepLoai}`);
+    </script>
+</body>
+</html>

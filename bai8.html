@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section07</title>
+</head>
+<body>
+    <script>
+        let weight = +(prompt("Nhập cân nặng (kg):"));
+        let height = +(prompt("Nhập chiều cao (m):"));
+        let bmi = weight / (height * height);
+
+        let bmiChoice = prompt("Lựa chọn chỉ tiêu BMI:\n1. BMI (kg/m^2) - WHO\n2. BMI (kg/m^2) - IDI & WPRO");
+        if (bmiChoice === "1") {
+            document.write("BMI (kg/m^2) - WHO: ");
+            switch (true) {
+                case (bmi < 18.5):
+                    document.write("Cân nặng thấp (gầy)");
+                    break;
+                case (bmi >= 18.5 && bmi <= 24.9):
+                    document.write("Bình thường");
+                    break;
+                case (bmi>=40):
+                    document.write("Béo phì độ III");
+                    break;
+                case (bmi >= 25):
+                    alert("Thừa cân");
+                    if (bmi >= 25 && bmi <= 29.9) {
+                        document.write("Tiền béo phì");
+                    } else if (bmi >= 30 && bmi <= 34.9) {
+                        document.write("Béo phì độ I");
+                    } else if (bmi >= 35 && bmi <= 39.9) {
+                        document.write("Béo phì độ II");
+                    }
+                    break;
+                default:
+                    alert("Hãy nhập lại từ đầu");
+            }
+        } else if (bmiChoice === "2") {
+            switch (true) {
+                case (bmi >= 18.5 && bmi <= 22.9):
+                    document.write("Bình thường");
+                    break;
+                case (bmi >= 30):
+                    document.write("Béo phì độ II");
+                    break;
+                case (bmi >= 23):
+                    alert("Thừa cân");
+                    if (bmi >= 23 && bmi <= 24.9) {
+                        document.write("Tiền béo phì");
+                    } else if (bmi >= 25 && bmi <= 29.9) {
+                        document.write("Béo phì độ I");
+                    }
+                    break;
+                default:
+                    alert("Hãy nhập lại từ đầu");
+            }
+        } else {alert("Hãy chọn lại");}
+    </script>
+</body>
+</html>
